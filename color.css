@@ -1,0 +1,34 @@
+ body {
+      margin: auto;
+      font-family: 'Sarabun', sans-serif;
+      background-color: aqua;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+.social-icons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.social {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 12px;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.facebook   { background-color: #3b5998; }
+.google     { background-color: #dd4b39; }
+.twitter    { background-color: #55acee; }
+.linkedin   { background-color: #0077b5; }
+.pinterest  { background-color: #cb2027; }
+.email      { background-color: #7f8c8d; }
+
+.social:hover {
+  opacity: 0.8;
+}

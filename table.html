@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รายการของเก่าที่เรารับซื้อ</title>
+  <link rel="stylesheet" href="color2.css">
+  <link rel="stylesheet" href="color3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+            <nav>
+            <ul class="nav-menu">
+                <li><a href="scrap_website.html"><i class="fa-solid fa-house"></i> หน้าหลัก</a></li>
+                <li><a href="table.html"><i class="fa-solid fa-box"></i> สิ่งที่เรารับซื้อ</a></li>
+                <li><a href="call.html"><i class="fa-solid fa-phone"></i> ติดต่อเรา</a></li>
+            </ul>
+            </nav>
+<body>
+    <section class="services">
+  <h2>รายการของเก่าที่เรารับซื้อ</h2>
+  <table class="scrap-table">
+    <thead>
+      <tr>
+        <th>ประเภท</th>
+        <th>ตัวอย่าง</th>
+        <th>ราคาโดยประมาณ (บาท/กก.)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ทองแดง</td>
+        <td>สายไฟ, ท่อทองแดง</td>
+        <td>200 บ./กก. - 250 บ./กก.</td>
+      </tr>
+      <tr>
+        <td>อลูมิเนียม</td>
+        <td>กระทะ, หน้าต่างเก่า</td>
+        <td>40 บ./กก. - 60 บ./กก.</td>
+      </tr>
+      <tr>
+        <td>แบตเตอรี่เก่า</td>
+        <td>แบตเตอรี่รถยนต์</td>
+        <td>25 บ./กก. - 35 บ./กก.</td>
+      </tr>
+      <tr>
+        <td>ขวดแก้ว</td>
+        <td>แก้วแดง, แก้วขาว, แก้วเขียว</td>
+        <td>1.80 บ./กก. - 2.80 บ./กก. - 1.90 บ./กก.</td>
+      </tr><tr>
+        <td>ขวดพลาสติก</td>
+        <td>พลาสติกใส, พลาสติกรวม, สกรีน</td>
+        <td>10 บ./กก. - 4 บ./กก. - 8 บ./กก.</td>
+      </tr>
+      </tr><tr>
+        <td>เครื่องใช้ไฟฟ้าเก่า</td>
+        <td>พัดลม, หม้อหุงข้าว, เตารีด</td>
+        <td>4-5 บ./กก.</td>
+      </tr></tr><tr>
+        <td>เหล็ก</td>
+        <td>เหล้กหนา, เหล็กบาง</td>
+        <td>10 บ./กก. - 9 บ./กก.</td>
+      </tr></tr><tr>
+        <td>สังกะสี</td>
+        <td>สังกะสี, กระป๋องกาแฟ</td>
+        <td>8 บ./กก.</td>
+
+            <script>
+             function openForm(item) {
+             document.getElementById("quoteForm").style.display = "block";
+             document.getElementById("scrapType").innerText = item;
+             document.getElementById("itemType").value = item;
+                }
+
+                function closeForm() {
+                document.getElementById("quoteForm").style.display = "none";
+                }
+
+                    function submitForm(event) {
+                    event.preventDefault();
+                    const name = document.getElementById("name").value;
+                    const phone = document.getElementById("phone").value;
+                    const item = document.getElementById("itemType").value;
+
+                    alert(`ส่งคำขอเรียบร้อยแล้ว!\nคุณ ${name}\nประเภท: ${item}\nเบอร์โทร: ${phone}`);
+                    closeForm();
+                }
+            </script>
+
+    </tbody>
+  </table>
+</section>
+
+<!-- แบบฟอร์ม Pop-up -->
+<div id="quoteForm" class="form-popup">
+  <form class="form-container" onsubmit="submitForm(event)">
+    <h3>ขอใบเสนอราคา: <span id="scrapType"></span></h3>
+    <input type="hidden" id="itemType" name="itemType">
+    <label for="name">ชื่อของคุณ:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="phone">เบอร์โทร:</label>
+    <input type="tel" id="phone" name="phone" required>
+    
+    <button type="submit">ส่งคำขอ</button>
+    <button type="button" onclick="closeForm()" class="cancel">ยกเลิก</button>
+  </form>
+</div>
+ 
+</body>
+</html>

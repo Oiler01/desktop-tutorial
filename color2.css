@@ -1,0 +1,91 @@
+/* ตาราง */
+.scrap-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.scrap-table th, .scrap-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #444;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.scrap-table th {
+  background-color: #ffdb99;
+  color: #333;
+  font-weight: bold;
+}
+
+.scrap-table tr:hover {
+  background-color: #f2f2f2;
+}
+
+.scrap-table button {
+  background: #007b33;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ฟอร์ม popup */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #888;
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.form-container button {
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.cancel {
+  background: #888;
+}
+html {
+    scroll-behavior: smooth;
+}
